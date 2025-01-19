@@ -3,8 +3,6 @@
             [re-frame.core :as rf]
             [zenform.model :as model]))
 
-(def styles inputs/styles)
-
 (defn form-value [form-path]
   (let [v (rf/subscribe [:zf/get-value form-path])]
     (fn []
