@@ -1,7 +1,11 @@
 (ns zenform.core
   (:require [cljs.pprint :as pprint]
+            
+            
             [re-frame.core :as rf]
-            [zenform.model :as model]))
+            
+            [zenform.model]
+            [zenform.events]))
 
 (defn form-value [form-path]
   (let [v (rf/subscribe [:zf/get-value form-path])]
